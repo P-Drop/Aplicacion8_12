@@ -2,8 +2,7 @@ package com.cursoceat.controller;
 
 import java.util.Scanner;
 
-import com.cursoceat.model.Caja;
-import com.cursoceat.model.Unidad;
+import com.cursoceat.model.*;
 
 public class Controller {
 
@@ -18,7 +17,7 @@ public class Controller {
 		System.out.print("Unidad de medida (cm/m): ");
 		String unidad = keyboard.next();
 		if(unidad.equals("cm")||unidad.equals("m")) {
-		Caja miCaja = new Caja(x, y, z, Unidad.valueOf(unidad));
+		CajaCarton miCaja = new CajaCarton(x, y, z, Unidad.valueOf(unidad));
 		System.out.print("Introduce la etiqueta (30 char): ");
 		String e = keyboard.next();
 		miCaja.setEtiqueta(e);
